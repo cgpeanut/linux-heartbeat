@@ -49,7 +49,7 @@ USR="roxasrr"
 LOAD_WARN=5.0
 
 # Your network info
-MYNETINFO="VUMC 2ring Servers"
+MYNETINFO="PAS 2ring Servers"
 #
 # if it  is run as cgi we can do reload stuff too :D
 PBY='Powered by <a href="https://github.com/cgpeanut/linux-heartbeat">script</a>'
@@ -143,5 +143,5 @@ do
 done
  # echo "</tr></table>"
 writeFoot
-#copy html to your web server root dir and see the Magic
+#copy html to your web server root dir and see the Magic 
 scp test.html 192.168.159.165:/var/www/html/
