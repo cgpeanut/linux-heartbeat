@@ -49,7 +49,7 @@ USR="roxasrr"
 LOAD_WARN=5.0
 
 # Your network info
-MYNETINFO="Server Info"
+MYNETINFO="VUMC 2ring Heartbeat"
 #
 # if it  is run as cgi we can do reload stuff too :D
 PBY='Powered by <a href="https://github.com/cgpeanut/linux-heartbeat">script</a>'
