@@ -3,13 +3,7 @@
 # from multiple Linux servers and output the information on a single server
 # in html format. Read below for usage/installation info
 # *---------------------------------------------------------------------------*
-# * dig_remote_linux_server_information.bash,v0.1, last updated on 25-Apr-2014*
-# * Copyright (c) 2014 Akkiaks project                                       *
-# * Comment/bugs: https://github.com/Akkiaks/                                    *
-# * Ref url: https://github.com/Akkiaks/           *
-# * This script is licensed under GNU GPL version 2.0 or above                *
-# *---------------------------------------------------------------------------*
-# *  Installation Info                                                        *
+# *  Installation Info                                                                                  *
 # ----------------------------------------------------------------------------*
 # You need to setup ssh-keys to avoid password prompt, see url how-to setup
 # ssh-keys:
@@ -21,7 +15,7 @@
 #
 # (b) Setup USR, who is used to connect via ssh and already setup to connect
 # via ssh-keys
-# USR="Akki"
+# USR="roxasrr"
 #
 # (c)Show warning if server load average is below the limit for last 5 minute.
 # setup LOAD_WARN as per your need, default is 5.0
@@ -46,10 +40,10 @@
 
 # SSH SERVER HOST IPS, setup me
 # Change this to query your host
-Q_HOST="192.168.1.127 192.168.1.167 192.168.1.114 192.168.2.48"
+Q_HOST="192.168.159.165 192.168.159.164"
 
 # SSH USER, change me
-USR="akki"
+USR="roxasrr"
 
 # Show warning if server load average is below the limit for last 5 minute
 LOAD_WARN=5.0
@@ -58,7 +52,7 @@ LOAD_WARN=5.0
 MYNETINFO="Server Info"
 #
 # if it  is run as cgi we can do reload stuff too :D
-PBY='Powered by <a href="https://github.com/Akkiaks/">script</a>'
+PBY='Powered by <a href="https://github.com/cgpeanut/linux-heartbeat">script</a>'
 
 
 # font colours
@@ -122,9 +116,9 @@ do
   <BR><img src=\"graph.gif\"> \
   <BR>" $4"/"$3 "</li>"}END{ print "</ul>"}')"
 
-  rusedram="$($_CMD free -mto | grep Mem: | awk '{ print $3 " MB" }')"
-  rfreeram="$($_CMD free -mto | grep Mem: | awk '{ print $4 " MB" }')"
-  rtotalram="$($_CMD free -mto | grep Mem: | awk '{ print $2 " MB" }')"
+  rusedram="$($_CMD free -mt | grep Mem: | awk '{ print $3 " MB" }')"
+  rfreeram="$($_CMD free -mt | grep Mem: | awk '{ print $4 " MB" }')"
+  rtotalram="$($_CMD free -mt | grep Mem: | awk '{ print $2 " MB" }')"
 
   $PING -c1  $host>/dev/null
   if [ "$?" != "0" ] ; then
@@ -150,4 +144,4 @@ done
  # echo "</tr></table>"
 writeFoot
 #copy html to your web server root dir and see the Magic
-scp test.html 192.168.1.167:/var/www/adminer/
+scp test.html 192.168.159.165:/var/www/html/
