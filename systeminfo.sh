@@ -54,7 +54,6 @@ MYNETINFO="PAS 2ring Servers"
 # if it  is run as cgi we can do reload stuff too :D
 PBY='Powered by <a href="https://github.com/cgpeanut/linux-heartbeat">script</a>'
 
-
 # font colours
 GREEN='<font color="#00ff00">'
 RED='<font color="#ff0000">'
@@ -64,7 +63,8 @@ LEND='</li></ul>'
 # Local path to ssh and other bins
 SSH="/usr/bin/ssh"
 PING="/bin/ping"
-NOW="$(date)"
+#NOW="$(date)"
+NOW="$(TZ=":America/Chicago" date)"
 
 ## functions ##
 writeHead(){
