@@ -1,0 +1,1 @@
+C:\Users\roxasrr\code\winserv-status\pscp.exe -pw Pcc62R1n9 pcce2ring@10.222.0.67:/home/pcce2ring/test.html "C:\inetpub\wwwroot"

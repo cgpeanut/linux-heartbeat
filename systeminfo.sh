@@ -15,7 +15,7 @@
 #
 # (b) Setup USR, who is used to connect via ssh and already setup to connect
 # via ssh-keys
-# USR="roxasrr"
+# USR="pcce2ring"
 #
 # (c)Show warning if server load average is below the limit for last 5 minute.
 # setup LOAD_WARN as per your need, default is 5.0
@@ -40,10 +40,10 @@
 
 # SSH SERVER HOST IPS, setup me
 # Change this to query your host
-Q_HOST="192.168.159.165 192.168.159.164"
+Q_HOST="10.222.0.67 10.222.1.67"
 
 # SSH USER, change me
-USR="roxasrr"
+USR="pcce2ring"
 
 # Show warning if server load average is below the limit for last 5 minute
 LOAD_WARN=5.0
@@ -144,4 +144,4 @@ done
  # echo "</tr></table>"
 writeFoot
 #copy html to your web server root dir and see the Magic 
-scp test.html 192.168.159.165:/var/www/html/
+#scp test.html 192.168.159.165:/var/www/html/
